@@ -13,7 +13,7 @@ import { DocumentService } from './document-service.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/cart.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';

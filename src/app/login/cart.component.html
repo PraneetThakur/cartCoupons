@@ -1,11 +1,11 @@
 <mat-card>
    
     <mat-card-content>
-        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <form [formGroup]="cartForm">
 
             <p>
                 <mat-form-field>
-                    <input type="number" (keydown)="calculateTotal()" (change)="calculateTotal()"  matInput placeholder="Trouser" formControlName="Trouser">
+                    <input type="number" (keyup)="calculateTotal('Trouser')"  (change)="calculateTotal('Trouser')"  matInput placeholder="Trouser" formControlName="Trouser">
                 
 
                 </mat-form-field>
@@ -13,19 +13,19 @@
 
             <p>
                 <mat-form-field>
-                    <input type="number" (keydown)="calculateTotal()" (change)="calculateTotal()" matInput placeholder="Shoes" formControlName="Shoes">
+                    <input type="number" (keyup)="calculateTotal('Shoes')" (change)="calculateTotal('Shoes')" matInput placeholder="Shoes" formControlName="Shoes">
                    
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field>
-                    <input type="number" (keydown)="calculateTotal()" (change)="calculateTotal()" matInput placeholder="Shirt" formControlName="Shirt">
+                    <input type="number" (keyup)="calculateTotal('Shirt')" (change)="calculateTotal('Shirt')" matInput placeholder="Shirt" formControlName="Shirt">
                    
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field>
-                    <input type="number" (keydown)="calculateTotal()" (change)="calculateTotal()" matInput placeholder="Ties" formControlName="Ties">
+                    <input type="number" (keyup)="calculateTotal('Ties')" (change)="calculateTotal('Ties')" matInput placeholder="Ties" formControlName="Ties">
                    
                 </mat-form-field>
             </p>
@@ -45,10 +45,10 @@
 
 
                 <h1 class="leftalign">Pay:{{totalAmount}}</h1>
-                <h2 class="leftalign">Order Total:{{grandTotal}}</h2>
+                <h3 class="leftalign">Order Total:{{grandTotal}}</h3>
 
             <div class="button">
-                <button type="submit" name="Save" mat-raised-button color="primary" class="text-uppercase"  mat-button>Add To Cart</button>
+                <button type="submit" name="Save" mat-raised-button color="primary" class="text-uppercase"  mat-button>Buy now</button>
             </div>
           
         </form>
